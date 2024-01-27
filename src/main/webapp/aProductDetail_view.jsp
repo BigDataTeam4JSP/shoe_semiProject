@@ -10,7 +10,7 @@
 <body>
 	
 	<h1>상품 디테일</h1>
-	<img src="null"><br>
+	<img src=""><br>
 	상품명 : <%=session.getAttribute("NAME") %><br>
 	색상 : <%=session.getAttribute("COLOR") %><br>
 	가격 : <%=session.getAttribute("PRICE") %><br>
