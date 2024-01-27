@@ -65,9 +65,9 @@ public class FrontController extends HttpServlet {
 		String viewPage = null;
 		
 		String uri = request.getRequestURI();
-		System.out.println(uri); 	   	//  /MVCBoard/list.do 라고 뜸
+		//System.out.println(uri); 	   	//  /MVCBoard/list.do 라고 뜸
 		String conPath = request.getContextPath();
-		System.out.println(conPath);	 //  /MVCBoard 라고 뜸
+		//System.out.println(conPath);	 //  /MVCBoard 라고 뜸
 		String com = uri.substring(conPath.length());
 		System.out.println(com);		//  /list.do라고 뜸(이걸로 페이지를 판단)
 		
