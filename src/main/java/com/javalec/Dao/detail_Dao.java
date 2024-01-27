@@ -37,7 +37,7 @@ public class detail_Dao {
 			// data 베이스 연결
 			connection = dataSource.getConnection();
 			// 쿼리 작성
-			String select = "SELECT p.pid ,p.pname ,p.pprice ,p.pcolor ,s.seq ,s.psize ,s.pqty ";
+			String select = "SELECT p.pid ,p.pname ,p.pprice ,p.pcolor ,p.pcontent ,p.pimgpath ,s.seq ,s.psize ,s.pqty";
 			String from = " FROM product as p, spec as s";
 			String where = " WHERE p.pid = ? AND p.pid = s.pid ";
 
@@ -53,13 +53,15 @@ public class detail_Dao {
 				int ppid = resultset.getInt("p.pid"); // 칼럼 이름을 넣어야함
 				String ppname = resultset.getString("p.pname"); 
 				int ppprice = resultset.getInt("p.pprice"); 
-				String ppcolor = resultset.getString("p.pcolor"); 
+				String ppcolor = resultset.getString("p.pcolor");
+				String ppcontent = resultset.getString("p.pcontent");
+				String ppimgpath = resultset.getString("p.pimgpath");
 				int sseq = resultset.getInt("s.seq");
 				String spsize = resultset.getString("s.psize");
 				String spqty = resultset.getString("s.pqty");
 				
 				// 불러온 데이터들을 dto 객체에 추가
-				dto = new detail_Dto(ppid, ppname, ppprice, ppcolor, sseq, spsize, spqty);
+				dto = new detail_Dto(ppid, ppname, ppprice, ppcolor, ppcontent, ppimgpath, sseq, spsize, spqty);
 			}
 
 		} catch (Exception e) {

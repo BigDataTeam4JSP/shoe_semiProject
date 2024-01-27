@@ -3,7 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
-<c:set var="dto" value="${detail }" />
+<c:set var="dto" value="${detailSession }" />
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -12,12 +12,12 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-	<form action="purchaseList.do" method="post">
+	<form action="cart.do" method="post">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
 					<div class="product-image">
-						<img src="img/won1.jpg" alt="제품 이미지" width="100%" height="100%">
+						<img src="${dto.pimgpath }" alt="제품 이미지" width="100%" height="100%">
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -26,9 +26,7 @@
 						<br>
 						<h2 class="product-price"><fmt:formatNumber value="${dto.pprice }" groupingUsed="true" />원</h2>
 						<br>
-						<p class="product-description">클래식한 디자인과 뛰어난 착화감으로 사랑받는 나이키 에어
-							조던 1 로우입니다. 가죽 소재로 제작되어 고급스러운 느낌을 주며, 에어 유닛이 탑재되어 편안한 착용감을 제공합니다.
-						</p>
+						<p class="product-description">${dto.pcontent }</p>
 						<br>
 						<table class="table product-specs">
 							<tbody>

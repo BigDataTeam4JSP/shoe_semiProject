@@ -7,17 +7,22 @@ public class detail_Dto {
 	String pname;
 	int pprice;
 	String pcolor;
+	String pcontent;
+	String pimgpath;
 	int seq;
 	String psize;
 	String pqty;
 
 	// Constructor
-	public detail_Dto(int pid, String pname, int pprice, String pcolor, int seq, String psize, String pqty) {
+	public detail_Dto(int pid, String pname, int pprice, String pcolor, String pcontent, String pimgpath, int seq,
+			String psize, String pqty) {
 		super();
 		this.pid = pid;
 		this.pname = pname;
 		this.pprice = pprice;
 		this.pcolor = pcolor;
+		this.pcontent = pcontent;
+		this.pimgpath = pimgpath;
 		this.seq = seq;
 		this.psize = psize;
 		this.pqty = pqty;
@@ -78,6 +83,22 @@ public class detail_Dto {
 
 	public void setPqty(String pqty) {
 		this.pqty = pqty;
+	}
+
+	public String getPcontent() {
+		return pcontent;
+	}
+
+	public void setPcontent(String pcontent) {
+		this.pcontent = pcontent;
+	}
+
+	public String getPimgpath() {
+		return pimgpath;
+	}
+
+	public void setPimgpath(String pimgpath) {
+		this.pimgpath = pimgpath;
 	}
 
 }
