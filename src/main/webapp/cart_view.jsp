@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
+<c:set var="dto" value="${detailSession }" />
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>상품 확인</title>
+<title>구매상품 확인</title>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
@@ -12,29 +15,26 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<img src="image.png" class="img-fluid" alt="이미지">
+				<img src="${dto.pimgpath }" class="img-fluid" alt="이미지">
 			</div>
 			<div class="col-md-6">
-				<h3>상품명</h3>
-				<p>상품 설명</p>
+				<h3>${dto.pname }</h3>
+				<p>${dto.pcontent }</p>
 				<ul class="list-group">
-					<li class="list-group-item"><strong class="text-right">이름 &nbsp;&nbsp;:</strong>
-						상품명</li>
 					<li class="list-group-item"><strong class="text-right">색상 &nbsp;&nbsp;:</strong>
-						색상</li>
+						${dto.pcolor }</li>
 					<li class="list-group-item"><strong class="text-right">사이즈 :</strong>
-						사이즈</li>
+						${size }</li>
 					<li class="list-group-item"><strong class="text-right">가격 &nbsp;&nbsp;:</strong>
-						가격</li>
+						<fmt:formatNumber value="${dto.pprice }" groupingUsed="true" />원
 					<li class="list-group-item"><strong class="text-right">수량 &nbsp;&nbsp;:</strong>
-						수량</li>
+						${qty }</li>
 				</ul>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-12 mt-2">
-				<a href="detail.do" class="btn btn-secondary float-left">뒤로가기</a> <a
-					href="purchaseList.do" class="btn btn-primary float-right">구매하기</a>
+				<a href="purchaseList.do" class="btn btn-primary float-right">구매확정</a>
 			</div>
 		</div>
 	</div>
