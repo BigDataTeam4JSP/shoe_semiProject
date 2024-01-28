@@ -26,6 +26,8 @@
 						사이즈</li>
 					<li class="list-group-item"><strong class="text-right">가격 &nbsp;&nbsp;:</strong>
 						가격</li>
+					<li class="list-group-item"><strong class="text-right">수량 &nbsp;&nbsp;:</strong>
+						수량</li>
 				</ul>
 			</div>
 		</div>
