@@ -38,8 +38,7 @@
 							<tbody>
 								<tr>
 									<td>사이즈</td>
-									<td><select class="form-control" name="size"
-										style="width: 110px">
+									<td><select class="form-control" name="size" style="width: 110px">
 											<option value="230">230mm</option>
 											<option value="240">240mm</option>
 											<option value="250">250mm</option>
@@ -51,8 +50,7 @@
 							<tbody>
 								<tr>
 									<td>수량</td>
-									<td><select class="form-control" name="qty"
-										style="width: 65px">
+									<td><select class="form-control" name="qty" style="width: 65px">
 											<option value="1">1</option>
 											<option value="2">2</option>
 											<option value="3">3</option>
@@ -66,7 +64,7 @@
 							</tbody>
 						</table>
 						<div class="product-button">
-							<button type="submit" class="btn btn-primary">바로 구매</button>
+							<button type="submit" class="btn btn-primary">구매하기</button>
 						</div>
 					</div>
 				</div>
