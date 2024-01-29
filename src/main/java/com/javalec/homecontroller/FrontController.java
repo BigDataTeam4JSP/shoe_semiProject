@@ -83,7 +83,7 @@ public class FrontController extends HttpServlet {
 		case("/productList.do"):
 			command = new productListCommand();
 			command.execute(request, response);
-			viewPage = "productList_view";
+			viewPage = "productList_view.jsp";
 			break;
 		case("/detail.do"):
 			command = new detailCommand();
